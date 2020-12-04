@@ -2,7 +2,6 @@ const { User } = require("../models/user");
 
 exports.create = async (req, res) => {
   const { firstName, lastName, email, password, phone } = req.body;
-  console.log(req.body)
   try {
     // Find a user with the email in the request body
     let user = await User.findOne({ email });
